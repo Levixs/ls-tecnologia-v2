@@ -16,6 +16,39 @@ export default function Footer() {
         { title: 'Contato', url: '#contact' },
     ]
 
+    const socialIconVariants = {
+        hidden: { scale: 0.8, opacity: 0 },
+        visible: (i: number) => ({
+            scale: 1,
+            opacity: 1,
+            transition: {
+                delay: i * 0.15,
+                duration: 0.5,
+                type: "spring",
+                stiffness: 100
+            }
+        }),
+        hover: {
+            y: 0,
+            scale: 1,
+            backgroundColor: "rgba(103, 232, 249, 0.2)",
+            boxShadow: "0 5px 15px rgba(103, 232, 249, 0.4)",
+            transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 10
+            }
+        },
+        tap: {
+            scale: 0.9,
+            transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 20
+            }
+        }
+    }
+
     const techStack = ['Next.js', 'TypeScript', 'Tailwind CSS', 'Python', 'ShadCN UI']
 
     const itemVariants = {
@@ -120,18 +153,22 @@ export default function Footer() {
                                 <motion.a
                                     key={i}
                                     custom={i}
-                                    variants={itemVariants}
+                                    variants={socialIconVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    whileHover="hover"
+                                    whileTap="tap"
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    whileHover={{
-                                        y: -5,
-                                        scale: 1.1,
-                                        color: '#67e8f9',
-                                    }}
-                                    className="text-xl p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all"
+                                    className="text-xl p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all"
                                 >
-                                    {social.icon}
+                                    <motion.div
+                                        whileHover={{ rotate: 360 }}
+                                        transition={{ type: "spring", stiffness: 200 }}
+                                    >
+                                        {social.icon}
+                                    </motion.div>
                                 </motion.a>
                             ))}
                         </div>

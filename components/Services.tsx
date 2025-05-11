@@ -49,28 +49,32 @@ export default function Services() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1,
-                delayChildren: 0.1
+                when: "beforeChildren"
             }
         }
     }
 
     const item = {
-        hidden: { y: 20, opacity: 0 },
+        hidden: {
+            y: 20,
+            opacity: 0
+        },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 0.4,
-                ease: "easeOut"
+                duration: 0.1,
+                ease: "easeInOut"
             }
         }
     }
 
     const hoverScale = {
-        scale: 1.02,
+        scale: 1,
+        y: 0,
         transition: {
-            duration: 0.2,
-            ease: "easeOut"
+            duration: 0.1,
+            ease: "easeInOut"
         }
     }
 
@@ -79,8 +83,8 @@ export default function Services() {
         backgroundColor: "rgba(55, 65, 81, 0.6)",
         color: "#f3f4f6",
         transition: {
-            duration: 0.2,
-            ease: "easeOut"
+            duration: 0.1,
+            ease: "easeInOut"
         }
     }
 
@@ -99,7 +103,10 @@ export default function Services() {
                     className="text-center mb-16 py-10"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    transition={{
+                        duration: 0.6,
+                        ease: "easeOut"
+                    }}
                     viewport={{ once: true }}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
@@ -115,7 +122,7 @@ export default function Services() {
                     variants={container}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-50px" }}
                 >
                     {services.map((service, index) => (
                         <motion.div
@@ -154,19 +161,22 @@ export default function Services() {
                 </motion.div>
 
                 <motion.div
-                    className="mt-7 text-center"
+                    className="mt-16 text-center"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    transition={{
+                        duration: 0.6,
+                        ease: "easeOut"
+                    }}
                     viewport={{ once: true }}
                 >
                     <p className="text-gray-400 mb-6">
                         Não encontrou exatamente o que precisa? Posso desenvolver uma solução personalizada para seu caso específico.
                     </p>
                     <motion.div
-                        whileHover={hoverScale}
+                        whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
-                        transition={{ duration: 0.15 }}
+                        transition={{ duration: 0.2 }}
                     >
                         <Button onClick={WhatsappRedirect} className="px-8 py-6 text-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg shadow-blue-500/30">
                             Falar sobre um projeto personalizado
