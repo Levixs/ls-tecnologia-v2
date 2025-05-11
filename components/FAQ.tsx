@@ -134,14 +134,14 @@ export default function FAQ() {
                                 onClick={() => setActiveCategory(category.id)}
                                 variant={activeCategory === category.id ? "default" : "outline"}
                                 className={cn(
-                                    "flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 rounded-full transition-all",
+                                    "flex items-center gap-2 cursor-pointer px-4 py-2 md:px-6 md:py-3 rounded-full transition-all",
                                     activeCategory === category.id
                                         ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/20"
-                                        : "border-gray-700 hover:border-gray-600 text-gray-400 hover:text-gray-300"
+                                        : "border-gray-700 hover:border-gray-600 text-gray-400 hover:text-black"
                                 )}
                             >
                                 {category.icon}
-                                <span className="text-sm md:text-base">{category.title}</span>
+                                <span className="text-sm md:text-base cursor-pointer">{category.title}</span>
                             </Button>
                         </motion.div>
                     ))}
@@ -165,9 +165,9 @@ export default function FAQ() {
                                             transition={{ delay: index * 0.1 }}
                                             viewport={{ once: true, margin: "-50px" }}
                                         >
-                                            <Card className="border-gray-800 bg-gray-900/30 hover:bg-gray-900/50 transition-colors py-1">
+                                            <Card className="border-gray-800 bg-gray-900/30 transition-colors py-1">
                                                 <AccordionItem value={`item-${index}`} className="border-none">
-                                                    <AccordionTrigger className="hover:no-underline px-4 md:px-6">
+                                                    <AccordionTrigger className="hover:no-underline px-4 md:px-6 cursor-pointer">
                                                         <h3 className="text-left text-sm md:text-base font-medium text-gray-200">
                                                             {item.question}
                                                         </h3>
@@ -176,11 +176,11 @@ export default function FAQ() {
                                                         <div className="border-t border-gray-800/50 pt-4">
                                                             <p className="text-sm md:text-base text-gray-400 mb-4">{item.answer}</p>
                                                             <div className="flex items-center justify-between">
-                                                                <Button variant="ghost" size="sm" className="text-gray-500 hover:text-blue-400 gap-2">
+                                                                <Button variant="ghost" size="sm" className="text-gray-500 hover:text-black gap-2 select-none">
                                                                     <ThumbsUp className="w-4 h-4" />
                                                                     <span>Útil ({item.likes})</span>
                                                                 </Button>
-                                                                <Button variant="link" size="sm" className="text-blue-400 hover:text-blue-300 gap-1">
+                                                                <Button onClick={emailRedirect} variant="link" size="sm" className="text-blue-400 hover:text-blue-300 gap-1 cursor-pointer">
                                                                     <Mail className="w-4 h-4" />
                                                                     <span>Ainda com dúvidas?</span>
                                                                 </Button>

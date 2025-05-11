@@ -149,7 +149,7 @@ export default function Contact() {
                                 type="submit"
                                 disabled={isSubmitting}
 
-                                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-cyan-600 transition-colors"
+                                className="w-full flex items-center justify-center cursor-pointer gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-cyan-600 transition-colors"
                             >
                                 <Send className="w-4 h-4" />
                                 {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
