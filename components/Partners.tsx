@@ -63,14 +63,14 @@ const hoverEffect = {
 
 export default function Partners() {
     return (
-        <section id="partners" className="relative py-20 overflow-hidden">
+        <section id="partners" className="relative py-10 overflow-hidden">
             <div className="absolute inset-0 overflow-hidden opacity-10">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
-                    className="text-center mb-16"
+                    className="text-center pb-20"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}

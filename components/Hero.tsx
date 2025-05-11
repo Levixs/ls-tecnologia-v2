@@ -45,7 +45,7 @@ export default function Hero() {
         <section id='hero' className="relative overflow-hidden flex items-center justify-center min-h-screen">
             <div id="hero-bg" className="absolute inset-0 overflow-hidden">
                 <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/30 to-cyan-900/20"
+                    className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-900/30 to-blue-900/30"
                     initial={{ backgroundPosition: '0% 50%' }}
                     animate={{
                         backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']

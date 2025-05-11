@@ -40,23 +40,23 @@ export default function Header() {
 
     const menuItemVariants = {
         hidden: { opacity: 0, y: -10 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             y: 0,
-            transition: { 
-                type: 'spring', 
+            transition: {
+                type: 'spring',
                 stiffness: 300,
                 damping: 20
             }
         },
-        hover: { 
+        hover: {
             scale: 1.05,
             transition: {
                 type: 'spring',
                 stiffness: 500
             }
         },
-        tap: { 
+        tap: {
             scale: 0.95,
             transition: {
                 type: 'spring',
@@ -67,8 +67,8 @@ export default function Header() {
 
     const mobileMenuItemVariants = {
         hidden: { x: -20, opacity: 0 },
-        visible: { 
-            x: 0, 
+        visible: {
+            x: 0,
             opacity: 1,
             transition: {
                 type: 'spring',
@@ -76,7 +76,7 @@ export default function Header() {
                 damping: 20
             }
         },
-        hover: { 
+        hover: {
             x: 5,
             backgroundColor: 'rgba(31, 41, 55, 0.8)',
             transition: {
@@ -88,32 +88,32 @@ export default function Header() {
 
     const backdropVariants = {
         hidden: { opacity: 0 },
-        visible: { 
+        visible: {
             opacity: 1,
             transition: { duration: 0.3 }
         },
-        exit: { 
+        exit: {
             opacity: 0,
             transition: { duration: 0.2 }
         }
     };
 
     const mobileMenuVariants = {
-        hidden: { 
-            y: -20, 
+        hidden: {
+            y: -20,
             opacity: 0,
             transition: { duration: 0.2 }
         },
-        visible: { 
-            y: 0, 
+        visible: {
+            y: 0,
             opacity: 1,
-            transition: { 
-                duration: 0.3, 
-                ease: [0.22, 1, 0.36, 1] 
+            transition: {
+                duration: 0.3,
+                ease: [0.22, 1, 0.36, 1]
             }
         },
-        exit: { 
-            y: -20, 
+        exit: {
+            y: -20,
             opacity: 0,
             transition: { duration: 0.2 }
         }
@@ -124,9 +124,9 @@ export default function Header() {
             <motion.header
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ 
-                    type: 'spring', 
-                    stiffness: 100, 
+                transition={{
+                    type: 'spring',
+                    stiffness: 100,
                     damping: 15,
                     delay: 0.1
                 }}
@@ -136,14 +136,14 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                         <motion.div
                             className="flex items-center cursor-pointer"
-                            whileHover={{ 
+                            whileHover={{
                                 scale: 1.05,
                                 transition: {
                                     type: 'spring',
                                     stiffness: 500
                                 }
                             }}
-                            whileTap={{ 
+                            whileTap={{
                                 scale: 0.95,
                                 transition: {
                                     type: 'spring',
@@ -152,22 +152,36 @@ export default function Header() {
                             }}
                         >
                             <a href="#hero" className="flex items-center focus:outline-none" aria-label="Ir para o topo">
-                                <motion.div 
-                                    className="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center"
+                                <motion.div
+                                    className="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center relative"
                                     whileHover={{
                                         rotate: 2,
                                         transition: { type: 'spring', stiffness: 300 }
                                     }}
                                 >
+                                    {/* Adicionando o efeito de highlight circular */}
+                                    <motion.div
+                                        className="absolute inset-0 rounded-full pointer-events-none"
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        whileHover={{
+                                            opacity: 1,
+                                            scale: 1,
+                                            boxShadow: "0 0 0 2px rgba(59, 130, 246, 0.8), 0 0 20px 10px rgba(59, 130, 246, 0.3)"
+                                        }}
+                                        transition={{
+                                            type: 'spring',
+                                            stiffness: 300,
+                                            damping: 20
+                                        }}
+                                    />
+
                                     <motion.div
                                         className="relative p-1"
                                         initial={{ scale: 1 }}
                                         whileHover={{
-                                            rotate: 5,
-                                            scale: 1.1,
-                                            boxShadow: "0 0 20px 5px rgba(59, 130, 246, 0.5)"
+                                            scale: 1.05,
+                                            transition: { type: 'spring', stiffness: 400 }
                                         }}
-                                        transition={{ type: 'spring', stiffness: 300 }}
                                     >
                                         <Image
                                             src={"/logoLS.svg"}
@@ -205,12 +219,12 @@ export default function Header() {
                                             <motion.span
                                                 className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400"
                                                 initial={{ width: 0 }}
-                                                whileHover={{ 
+                                                whileHover={{
                                                     width: '100%',
-                                                    transition: { 
+                                                    transition: {
                                                         duration: 0.3,
                                                         ease: [0.22, 1, 0.36, 1]
-                                                    } 
+                                                    }
                                                 }}
                                             />
                                         </a>
@@ -223,12 +237,12 @@ export default function Header() {
                             className="md:hidden text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded p-1"
                             onClick={() => setMenuOpen(!menuOpen)}
                             aria-label="Menu"
-                            whileHover={{ 
+                            whileHover={{
                                 scale: 1.1,
                                 rotate: 5,
                                 transition: { type: 'spring', stiffness: 500 }
                             }}
-                            whileTap={{ 
+                            whileTap={{
                                 scale: 0.9,
                                 transition: { type: 'spring', stiffness: 500 }
                             }}
