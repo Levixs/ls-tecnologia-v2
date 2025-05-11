@@ -63,7 +63,7 @@ const hoverEffect = {
 
 export default function Partners() {
     return (
-        <section id="partners" className="relative py-20 overflow-hidden bg-gradient-to-b from-gray-900/50 to-gray-900">
+        <section id="partners" className="relative py-20 overflow-hidden">
             <div className="absolute inset-0 overflow-hidden opacity-10">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
             </div>

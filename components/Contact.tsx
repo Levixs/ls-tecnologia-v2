@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
+import { Button } from './ui/button';
 
 interface ContactItemProps {
     icon: React.ReactNode;
@@ -144,7 +145,7 @@ export default function Contact() {
                                 )}
                             </div>
 
-                            <button
+                            <Button
                                 type="submit"
                                 disabled={isSubmitting}
 
@@ -152,7 +153,7 @@ export default function Contact() {
                             >
                                 <Send className="w-4 h-4" />
                                 {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
-                            </button>
+                            </Button>
                         </form>
                     </div>
 

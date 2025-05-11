@@ -84,6 +84,10 @@ export default function Services() {
         }
     }
 
+    const WhatsappRedirect = () => {
+        window.open('https://wa.me/5516992276144?text=Olá%2C+vi+o+seu+site+e+tenho+interesse+em+negociar.', '_blank');
+    };
+
     return (
         <section id="services" className="relative py-20 overflow-hidden">
             <div className="absolute inset-0 overflow-hidden opacity-10">
@@ -164,7 +168,7 @@ export default function Services() {
                         whileTap={{ scale: 0.98 }}
                         transition={{ duration: 0.15 }}
                     >
-                        <Button className="px-8 py-6 text-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg shadow-blue-500/30">
+                        <Button onClick={WhatsappRedirect} className="px-8 py-6 text-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg shadow-blue-500/30">
                             Falar sobre um projeto personalizado
                         </Button>
                     </motion.div>
