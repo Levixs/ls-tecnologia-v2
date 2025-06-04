@@ -106,9 +106,9 @@ export default function FAQ() {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center mb-4">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                            Perguntas Frequentes
-                        </span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-gray-100 mb-4">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Perguntas</span> Frequentes
+                        </h2>
                     </h2>
                     <p className="text-sm md:text-base lg:text-lg text-gray-400 max-w-3xl mx-auto">
                         Encontre respostas para as dúvidas mais comuns sobre nossos serviços e processos
@@ -176,14 +176,10 @@ export default function FAQ() {
                                                         <div className="border-t border-gray-800/50 pt-4">
                                                             <p className="text-sm md:text-base text-gray-400 mb-4">{item.answer}</p>
                                                             <div className="flex items-center justify-between">
-                                                                <Button variant="ghost" size="sm" className="text-gray-500 hover:text-black gap-2 select-none">
+                                                                <span className="text-gray-500 flex gap-2 select-none">
                                                                     <ThumbsUp className="w-4 h-4" />
                                                                     <span>Útil ({item.likes})</span>
-                                                                </Button>
-                                                                <Button onClick={emailRedirect} variant="link" size="sm" className="text-blue-400 hover:text-blue-300 gap-1 cursor-pointer">
-                                                                    <Mail className="w-4 h-4" />
-                                                                    <span>Ainda com dúvidas?</span>
-                                                                </Button>
+                                                                </span>
                                                             </div>
                                                         </div>
                                                     </AccordionContent>
@@ -214,9 +210,7 @@ export default function FAQ() {
 
                             <div className="relative z-10">
                                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
-                                    <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                                        Ainda com dúvidas?
-                                    </span>
+                                    Ainda com <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">dúvidas?</span>
                                 </h3>
                                 <p className="text-base md:text-lg text-gray-400 mb-8 max-w-xl mx-auto leading-relaxed">
                                     Nossa equipe está disponível para te ajudar com qualquer questão. Entre em contato ou explore nossa base de conhecimento.

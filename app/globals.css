@@ -155,7 +155,7 @@ html {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(0, 87, 239, 0.8) transparent;
+  scrollbar-color: #00B5DD transparent;
 }
 
 ::-webkit-scrollbar-thumb:active {
