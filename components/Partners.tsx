@@ -20,13 +20,7 @@ const partners = [
         logo: "/IRASTech.jpg",
         alt: "IRAS Tech Logo",
         url: "https://github.com/IanAlexandrino"
-    },
-    {
-        name: "Vincer",
-        logo: "/Vincer.png",
-        alt: "Vincer Logo",
-        url: "#"
-    },
+    }
 ]
 
 const container = {

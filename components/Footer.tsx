@@ -1,10 +1,10 @@
 "use client";
-import { motion } from 'framer-motion'
-import { Code2, Github, Linkedin, Mail } from 'lucide-react'
+import { motion } from 'framer-motion';
+import { Code2, Instagram, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
     const socialLinks = [
-        { icon: <Github size={20} />, url: 'https://github.com/Levixs' },
+        { icon: <Instagram size={20} />, url: 'https://www.instagram.com/_lstecnologia_/' },
         { icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/gleidsonlevi/' },
     ]
 
