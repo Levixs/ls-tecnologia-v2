@@ -244,22 +244,9 @@ export default function Hero() {
                                     height={400}
                                     quality={90}
                                     priority
+                                    unoptimized
                                 />
                             </motion.div>
-
-                            <motion.div
-                                className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl shadow-xl -z-10"
-                                initial={{ y: 0 }}
-                                animate={{
-                                    y: [0, -15, 0],
-                                    rotate: [0, 3, -3, 0]
-                                }}
-                                transition={{
-                                    duration: 8,
-                                    repeat: Infinity,
-                                    ease: 'easeInOut'
-                                }}
-                            />
 
                             <motion.div
                                 className="absolute -bottom-8 -left-8 bg-white/5 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/10"
