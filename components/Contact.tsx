@@ -1,5 +1,5 @@
 "use client";
-import { Calendar, Check, Github, Linkedin, Mail, Phone, Send } from 'lucide-react';
+import { Calendar, Check, Instagram, Linkedin, Mail, Phone, Send } from 'lucide-react';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Input } from './ui/input';
@@ -193,13 +193,13 @@ export default function Contact() {
                                     </Link>
 
                                     <Link
-                                        href="https://github.com/Levixs"
+                                        href="https://www.instagram.com/_lstecnologia_/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-500/10 transition-colors"
                                         aria-label="GitHub"
                                     >
-                                        <Github className="w-5 h-5 text-gray-200" />
+                                        <Instagram className="w-5 h-5 text-pink-500" />
                                     </Link>
                                 </div>
                             </div>
