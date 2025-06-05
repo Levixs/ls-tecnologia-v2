@@ -224,7 +224,7 @@ export default function Hero() {
                     </div>
 
                     <motion.div
-                        className="lg:w-1/2 relative"
+                        className="lg:w-1/2 w-full relative"
                         variants={itemVariants}
                         transition={{ delay: 1.2 }}
                         whileHover={{
@@ -232,74 +232,67 @@ export default function Hero() {
                             transition: { duration: 0.5 }
                         }}
                     >
-                        <div className="relative">
-                            <motion.div
-                                animate={floatingAnimation}
-                                className="w-full max-w-lg mx-auto"
-                            >
-                                <div className="relative w-full aspect-[3/2] safari-aspect-fallback">
-                                    <Image
-                                        src="/HeroImg.webp"
-                                        alt="API Development"
-                                        className="rounded-2xl shadow-2xl w-full h-auto border border-white/10 object-cover"
-                                        fill
-                                        quality={90}
-                                        priority
-                                        unoptimized
-                                    />
-                                </div>
-                            </motion.div>
-
-                            <motion.div
-                                className="absolute -bottom-8 -left-8 bg-white/5 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/10"
-                                initial={{ scale: 0.9, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                transition={{
-                                    duration: 0.5,
-                                    delay: 1.5,
-                                    type: "spring",
-                                    stiffness: 100
-                                }}
-                                whileHover={{
-                                    scale: 1.05,
-                                    y: -5
-                                }}
-                            >
-                                <div className="flex items-center gap-2">
-                                    <motion.div
-                                        className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500"
-                                        animate={{
-                                            opacity: [1, 0.8, 1],
-                                            scale: [1, 1.05, 1]
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'easeInOut'
-                                        }}
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-6 w-6"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M5 12h14M12 5l7 7-7 7"
-                                            />
-                                        </svg>
-                                    </motion.div>
-                                    <div>
-                                        <p className="font-bold text-white">+200 endpoints</p>
-                                        <p className="text-xs text-gray-300">Desenvolvidos</p>
-                                    </div>
-                                </div>
-                            </motion.div>
+                        <div className="relative w-full max-w-lg mx-auto md:max-w-lg sm:max-w-full sm:px-2">
+                            <div className="relative w-full aspect-[3/2] safari-aspect-fallback">
+                                <Image
+                                    src="/HeroImg.webp"
+                                    alt="API Development"
+                                    className="rounded-2xl shadow-2xl w-full h-auto border border-white/10 object-cover"
+                                    fill
+                                    quality={90}
+                                    priority
+                                />
+                            </div>
                         </div>
+                        <motion.div
+                            className="absolute -bottom-8 -left-8 bg-white/5 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/10"
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{
+                                duration: 0.5,
+                                delay: 1.5,
+                                type: "spring",
+                                stiffness: 100
+                            }}
+                            whileHover={{
+                                scale: 1.05,
+                                y: -5
+                            }}
+                        >
+                            <div className="flex items-center gap-2">
+                                <motion.div
+                                    className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500"
+                                    animate={{
+                                        opacity: [1, 0.8, 1],
+                                        scale: [1, 1.05, 1]
+                                    }}
+                                    transition={{
+                                        duration: 3,
+                                        repeat: Infinity,
+                                        ease: 'easeInOut'
+                                    }}
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M5 12h14M12 5l7 7-7 7"
+                                        />
+                                    </svg>
+                                </motion.div>
+                                <div>
+                                    <p className="font-bold text-white">+200 endpoints</p>
+                                    <p className="text-xs text-gray-300">Desenvolvidos</p>
+                                </div>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 </motion.div>
             </div>
