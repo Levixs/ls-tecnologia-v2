@@ -235,17 +235,19 @@ export default function Hero() {
                         <div className="relative">
                             <motion.div
                                 animate={floatingAnimation}
+                                className="w-full max-w-lg mx-auto"
                             >
-                                <Image
-                                    src="/HeroImg.webp"
-                                    alt="API Development"
-                                    className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto border border-white/10"
-                                    width={600}
-                                    height={400}
-                                    quality={90}
-                                    priority
-                                    unoptimized
-                                />
+                                <div className="relative w-full aspect-[3/2] safari-aspect-fallback">
+                                    <Image
+                                        src="/HeroImg.webp"
+                                        alt="API Development"
+                                        className="rounded-2xl shadow-2xl w-full h-auto border border-white/10 object-cover"
+                                        fill
+                                        quality={90}
+                                        priority
+                                        unoptimized
+                                    />
+                                </div>
                             </motion.div>
 
                             <motion.div

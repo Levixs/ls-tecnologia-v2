@@ -155,7 +155,7 @@ html {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #00B5DD transparent;
+  scrollbar-color: #00b5dd transparent;
 }
 
 ::-webkit-scrollbar-thumb:active {
@@ -170,4 +170,21 @@ html {
 
 .scroll-thin::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
+}
+
+/* Fallback para aspect-ratio no Safari antigo */
+.safari-aspect-fallback {
+  position: relative;
+}
+.safari-aspect-fallback::before {
+  content: "";
+  display: block;
+  padding-bottom: 66.6667%; /* 3/2 aspect ratio */
+}
+.safari-aspect-fallback > * {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
