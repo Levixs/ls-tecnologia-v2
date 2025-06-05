@@ -241,6 +241,7 @@ export default function Hero() {
                                     fill
                                     quality={90}
                                     priority
+                                    unoptimized
                                 />
                             </div>
                         </div>
