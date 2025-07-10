@@ -94,8 +94,14 @@ export default function Services() {
 
     return (
         <section id="services" className="relative py-20 overflow-hidden">
-            <div className="absolute inset-0 overflow-hidden opacity-10">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+            {/* Background overlay with subtle pattern */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/30 to-transparent" />
+                <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#3b82f608_1px,transparent_1px),linear-gradient(to_bottom,#3b82f608_1px,transparent_1px)] bg-[size:32px_32px]" />
+
+                {/* Subtle animated elements */}
+                <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '4s' }} />
+                <div className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-cyan-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
@@ -129,13 +135,13 @@ export default function Services() {
                             key={index}
                             variants={item}
                             whileHover={hoverScale}
-                            className="group bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 hover:border-blue-500/30 transition-all hover:shadow-lg hover:shadow-blue-500/10 relative overflow-hidden backdrop-blur-sm"
+                            className="group bg-gray-900/40 backdrop-blur-sm rounded-xl p-6 border border-gray-700/30 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 relative overflow-hidden"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                             <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-blue-500/20 transition-all pointer-events-none" />
                             <div className="relative z-10">
                                 <div className="mb-4">
-                                    <div className="w-12 h-12 rounded-lg bg-gray-700/50 flex items-center justify-center group-hover:bg-gray-700/70 transition-all group-hover:shadow-[0_0_15px_-3px_rgba(59,130,246,0.3)]">
+                                    <div className="w-12 h-12 rounded-lg bg-gray-800/60 backdrop-blur-sm flex items-center justify-center group-hover:bg-gray-700/70 transition-all group-hover:shadow-[0_0_20px_-3px_rgba(59,130,246,0.4)]">
                                         {service.icon}
                                     </div>
                                 </div>

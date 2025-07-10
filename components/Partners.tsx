@@ -57,9 +57,15 @@ const hoverEffect = {
 
 export default function Partners() {
     return (
-        <section id="partners" className="relative py-10 overflow-hidden">
-            <div className="absolute inset-0 overflow-hidden opacity-10">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+        <section id="partners" className="relative py-20 overflow-hidden">
+            {/* Background overlay */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/25 to-transparent" />
+                <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#06b6d408_1px,transparent_1px),linear-gradient(to_bottom,#06b6d408_1px,transparent_1px)] bg-[size:36px_36px]" />
+
+                {/* Subtle animated elements */}
+                <div className="absolute top-1/4 right-1/5 w-24 h-24 bg-cyan-500/8 rounded-full blur-xl animate-pulse" style={{ animationDuration: '6s' }} />
+                <div className="absolute bottom-1/3 left-1/5 w-32 h-32 bg-blue-500/8 rounded-full blur-xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '3s' }} />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">

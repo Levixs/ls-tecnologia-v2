@@ -45,7 +45,7 @@ export default function Hero() {
         <section id='hero' className="relative overflow-hidden flex items-center justify-center min-h-screen">
             <div id="hero-bg" className="absolute inset-0 overflow-hidden">
                 <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-900/30 to-blue-900/30"
+                    className="absolute inset-0"
                     initial={{ backgroundPosition: '0% 50%' }}
                     animate={{
                         backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
@@ -57,16 +57,16 @@ export default function Hero() {
                     }}
                 />
 
-                <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+                <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#3b82f612_1px,transparent_1px),linear-gradient(to_bottom,#3b82f612_1px,transparent_1px)] bg-[size:48px_48px]"></div>
 
                 {[...Array(15)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="absolute h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"
+                        className="absolute h-[1px] bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"
                         initial={{ x: -100, opacity: 0 }}
                         animate={{
                             x: ['-100%', `${100 + (i % 2 === 0 ? 20 : -20)}%`],
-                            opacity: [0, 0.5, 0],
+                            opacity: [0, 0.6, 0],
                             width: ['10%', `${40 + Math.random() * 20}%`, '10%']
                         }}
                         transition={{

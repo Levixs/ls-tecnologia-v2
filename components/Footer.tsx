@@ -64,7 +64,12 @@ export default function Footer() {
     }
 
     return (
-        <footer className="bg-zinc-950 text-zinc-200 pt-16 pb-8 px-6 mt-20">
+        <footer className="relative bg-gray-950/80 backdrop-blur-sm text-zinc-200 pt-16 pb-8 px-6 mt-20 border-t border-gray-800/50">
+            {/* Background overlay */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute inset-0 opacity-3 bg-[linear-gradient(to_right,#3b82f606_1px,transparent_1px),linear-gradient(to_bottom,#3b82f606_1px,transparent_1px)] bg-[size:32px_32px]" />
+            </div>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     <motion.div
@@ -96,7 +101,7 @@ export default function Footer() {
                         >
                             <a
                                 href="mailto:contato@lstecnologia.com"
-                                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg transition-all"
+                                className="flex items-center gap-2 bg-gray-800/40 hover:bg-gray-700/60 backdrop-blur-sm px-4 py-2 rounded-lg transition-all border border-gray-700/30"
                             >
                                 <Mail size={18} className="text-cyan-300" />
                                 <span>Contate-nos</span>
@@ -161,7 +166,7 @@ export default function Footer() {
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-xl p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all"
+                                    className="text-xl p-3 rounded-full bg-gray-800/40 backdrop-blur-sm border border-gray-700/30 hover:bg-gray-700/60 transition-all"
                                 >
                                     <motion.div
                                         whileHover={{ rotate: 360 }}

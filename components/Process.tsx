@@ -43,7 +43,17 @@ const processSteps = [
 
 export function Process() {
     return (
-        <section id="process" className="relative py-0 overflow-hidden">
+        <section id="process" className="relative py-20 overflow-hidden">
+            {/* Background overlay */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent" />
+                <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#8b5cf608_1px,transparent_1px),linear-gradient(to_bottom,#8b5cf608_1px,transparent_1px)] bg-[size:40px_40px]" />
+
+                {/* Subtle animated elements */}
+                <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-purple-500/8 rounded-full blur-xl animate-pulse" style={{ animationDuration: '5s' }} />
+                <div className="absolute bottom-1/4 right-1/3 w-28 h-28 bg-fuchsia-500/8 rounded-full blur-xl animate-pulse" style={{ animationDuration: '7s', animationDelay: '2.5s' }} />
+            </div>
+
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     className="text-center mb-20 py-10"
@@ -76,7 +86,7 @@ export function Process() {
                             }}
                             viewport={{ once: true, margin: "-30px" }}
                         >
-                            <Card className="h-full bg-gray-900/50 border border-gray-800/50 hover:border-blue-400/30 transition-all group hover:shadow-[0_8px_20px_-10px_rgba(59,130,246,0.25)]">
+                            <Card className="h-full bg-gray-900/40 backdrop-blur-sm border border-gray-700/30 hover:border-blue-400/40 transition-all duration-300 group hover:shadow-[0_8px_20px_-10px_rgba(59,130,246,0.25)]">
                                 <CardHeader>
                                     <div className={`flex items-center justify-center w-12 h-12 rounded-lg mb-3 bg-gradient-to-br ${step.color} shadow-lg group-hover:opacity-90 transition-opacity`}>
                                         {React.cloneElement(step.icon, {

@@ -90,7 +90,16 @@ export default function FAQ() {
     const [activeCategory, setActiveCategory] = React.useState("general")
 
     return (
-        <section id="FAQ" className="relative py-16 md:py-24 bg-gradient-to-b from-gray-950 to-gray-900 overflow-hidden">
+        <section id="FAQ" className="relative py-20 overflow-hidden">
+            {/* Background overlay */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/30 to-transparent" />
+                <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#f59e0b08_1px,transparent_1px),linear-gradient(to_bottom,#f59e0b08_1px,transparent_1px)] bg-[size:44px_44px]" />
+
+                {/* Subtle animated elements */}
+                <div className="absolute top-1/4 left-1/5 w-28 h-28 bg-amber-500/8 rounded-full blur-xl animate-pulse" style={{ animationDuration: '9s' }} />
+                <div className="absolute bottom-1/4 right-1/4 w-20 h-20 bg-orange-500/8 rounded-full blur-xl animate-pulse" style={{ animationDuration: '7s', animationDelay: '4s' }} />
+            </div>
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-1/4 w-32 h-32 rounded-full bg-blue-500 blur-3xl opacity-20" />
                 <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-purple-500 blur-3xl opacity-15" />
