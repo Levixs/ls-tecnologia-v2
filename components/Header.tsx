@@ -13,7 +13,7 @@ export default function Header() {
         { name: 'Serviços', href: '#services' },
         { name: 'Contato', href: '#contact' },
         { name: 'FAQ', href: '#FAQ' },
-        { name: 'dev', href: '#dev' }
+        // { name: 'dev', href: '#dev' }
     ];
     
     useEffect(() => {
