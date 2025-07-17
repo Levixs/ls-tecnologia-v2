@@ -12,9 +12,10 @@ export default function Header() {
         { name: 'Início', href: '#hero' },
         { name: 'Serviços', href: '#services' },
         { name: 'Contato', href: '#contact' },
-        { name: 'FAQ', href: '#FAQ' }
+        { name: 'FAQ', href: '#FAQ' },
+        { name: 'dev', href: '#dev' }
     ];
-
+    
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
         checkMobile();
